@@ -6,13 +6,13 @@
 /*   By: akefeder <akefeder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 20:19:41 by akefeder          #+#    #+#             */
-/*   Updated: 2021/11/28 20:40:17 by akefeder         ###   ########.fr       */
+/*   Updated: 2021/12/02 03:53:02 by akefeder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	main(int argc, char **argv)
+int	main()//int argc, char **argv)
 {
 	
 	return (0);

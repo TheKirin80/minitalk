@@ -21,23 +21,19 @@ CFLAGS	= -Wall -Wextra -Werror
 .c.o :
 			${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
+all:		${NAMECLT} ${NAMESRV}
+
+${NAMECLT}:	${OBJSCLT} 
+			${CC}  ${CFLAGS} ${OBJSCLT} -o ${NAMECLT}
+
 ${NAMESRV}:	${OBJSSRV} 
 			${CC}  ${CFLAGS} ${OBJSSRV} -o ${NAMESRV}
 
-#${NAMECLT}:	${OBJSCLT} 
-#			${CC}  ${CFLAGS} ${OBJSCLT} -o ${NAMECLT}
-
-bonus:		${OBJS} ${OBJSBON} 
-			${CCLIB} ${OBJS} ${OBJSBON}
-
-all:		${NAMESRV}
-			#${NAMECLT}
-
 clean:		
-			${RM} ${OBJS} ${OBJSBON}
+			${RM} ${OBJSSRV} ${OBJSCLT}
 
 fclean:		clean
-			${RM} ${NAME} 
+			${RM} ${NAMESRV} ${NAMECLT} 
 
 re:			fclean all
 
