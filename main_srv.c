@@ -6,7 +6,7 @@
 /*   By: akefeder <akefeder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 20:19:21 by akefeder          #+#    #+#             */
-/*   Updated: 2021/12/03 14:46:41 by akefeder         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:40:17 by akefeder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	main(void)
 	sa_signal.sa_sigaction = handler_signal;
 	sigaction(SIGUSR1, &sa_signal, NULL);
 	sigaction(SIGUSR2, &sa_signal, NULL);
-	ft_putstr_color_fd("PID: ", 1);
+	ft_putstr_fd("PID: ", 1);
 	ft_putnbr_fd(getpid(), 1);
 	ft_putstr_fd("\n", 1);
 	while (1)

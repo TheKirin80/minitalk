@@ -6,7 +6,7 @@
 /*   By: akefeder <akefeder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 20:19:41 by akefeder          #+#    #+#             */
-/*   Updated: 2021/12/03 12:51:32 by akefeder         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:44:32 by akefeder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,10 @@ void	handler_signal(int signum)
 
 int	main(int argc, char **argv)
 {
-	if (argc != 3 || !ft_str_isnumeric(argv[1]))
+	printf("%d", argc);
+	if (argc != 3 || ft_stisnum(argv[1]) == 1 || ft_islong(argv[1]) == 1)
 	{
-		ft_putstr_color_fd("Bad argument\n", 2);
+		ft_putstr_fd("Bad argument\n", 2);
 		exit(EXIT_ERROR);
 	}
 	signal(SIGUSR1, handler_signal);
