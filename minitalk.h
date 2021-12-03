@@ -6,7 +6,7 @@
 /*   By: akefeder <akefeder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 09:12:48 by akefeder          #+#    #+#             */
-/*   Updated: 2021/12/03 19:57:06 by akefeder         ###   ########.fr       */
+/*   Updated: 2021/12/03 20:34:49 by akefeder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include<signal.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 # define EXIT_ERROR 1
 # define ERROR -1
