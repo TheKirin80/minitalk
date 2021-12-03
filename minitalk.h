@@ -5,8 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akefeder <akefeder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 20:18:25 by akefeder          #+#    #+#             */
-/*   Updated: 2021/11/28 20:18:45 by akefeder         ###   ########.fr       */
+/*   Created: 2021/12/03 09:12:48 by akefeder          #+#    #+#             */
+/*   Updated: 2021/12/03 09:13:36 by akefeder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <signal.h>
+#include <unistd.h>
+
+# define EXIT_ERROR	1
+# define ERROR		-1
 
