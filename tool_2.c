@@ -6,7 +6,7 @@
 /*   By: akefeder <akefeder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 15:54:55 by akefeder          #+#    #+#             */
-/*   Updated: 2021/12/03 17:39:25 by akefeder         ###   ########.fr       */
+/*   Updated: 2021/12/03 19:49:52 by akefeder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,72 +14,72 @@
 
 int	ft_atoi(char *str)
 {
-        int		i;
-        long	signe;
-        long	res;
-        int		ret;
+	int		i;
+	long	signe;
+	long	res;
+	int		ret;
 
-        i = 0;
-        signe = 1;
-        res = 0;
-        while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-                || str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
-                i++;
-        if (str[i] == '-' || str[i] == '+')
-        {
-                if (str[i] == '-')
-                        signe = signe * (-1);
-                i++;
-        }
-        while (str[i] != '\0' && (str[i] > 47 && str[i] < 58))
-        {
-                res = res * 10 + (str[i] - 48);
-                i++;
-        }
-        ret = res * signe;
-        return (ret);
+	i = 0;
+	signe = 1;
+	res = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			signe = signe * (-1);
+		i++;
+	}
+	while (str[i] != '\0' && (str[i] > 47 && str[i] < 58))
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
+	ret = res * signe;
+	return (ret);
 }
 
 long	ft_atoi_lg(char *str)
 {
-        int		i;
-        long	signe;
-        long	res;
-        int		ret;
+	int		i;
+	long	signe;
+	long	res;
+	int		ret;
 
-        i = 0;
-        signe = 1;
-        res = 0;
-        while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-                || str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
-                i++;
-        if (str[i] == '-' || str[i] == '+')
-        {
-                if (str[i] == '-')
-                        signe = signe * (-1);
-                i++;
-        }
-        while (str[i] != '\0' && (str[i] > 47 && str[i] < 58))
-        {
-                res = res * 10 + (str[i] - 48);
-                i++;
-        }
-        ret = res * signe;
-        return (ret);
+	i = 0;
+	signe = 1;
+	res = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			signe = signe * (-1);
+		i++;
+	}
+	while (str[i] != '\0' && (str[i] > 47 && str[i] < 58))
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
+	ret = res * signe;
+	return (ret);
 }
 
 int	ft_islong(char *str)
 {
 	long	i;
-	int j;
+	int		j;
 
 	i = 0;
 	j = 0;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
-                i++;
+		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+		i++;
 	if (str[i] == '-' || str[i] == '+')
-            i++;
+		i++;
 	while (str[i] != '\0')
 	{
 		i++;
@@ -93,11 +93,10 @@ int	ft_islong(char *str)
 	return (ERROR);
 }
 
-void ft_putchar_fd (char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -122,4 +121,3 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd(n + '0', fd);
 	}
 }
-

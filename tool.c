@@ -6,7 +6,7 @@
 /*   By: akefeder <akefeder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 16:23:54 by akefeder          #+#    #+#             */
-/*   Updated: 2021/12/03 17:44:09 by akefeder         ###   ########.fr       */
+/*   Updated: 2021/12/03 20:24:48 by akefeder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isnum(int c)
 {
-	int valide;
+	int	valide;
 
 	if (c > 47 && c < 58)
 		valide = 0;
@@ -23,10 +23,10 @@ int	ft_isnum(int c)
 	return (valide);
 }
 
-int ft_stisnum(char *message)
+int	ft_stisnum(char *message)
 {
 	int	i;
-	int valide;
+	int	valide;
 
 	i = 0;
 	while (message[i] != '\0')
@@ -39,7 +39,7 @@ int ft_stisnum(char *message)
 	return (valide);
 }
 
-int ft_strlen(char *message)
+int	ft_strlen(char *message)
 {
 	int	i;
 
@@ -49,15 +49,15 @@ int ft_strlen(char *message)
 	return (i);
 }
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-        int  len;
+	int	len;
 
-        if (s != NULL && fd >= 0)
-        {
-                len = ft_strlen(s);
-                write(fd, s, len);
-        }
+	if (s != NULL && fd >= 0)
+	{
+		len = ft_strlen(s);
+		write(fd, s, len);
+	}
 }
 
 char	*ft_strdup(char *s)
@@ -68,7 +68,8 @@ char	*ft_strdup(char *s)
 
 	i = 0;
 	len = ft_strlen(s);
-	if ((cpy = (char *)malloc((len + 1) * sizeof(char))) == NULL)
+	cpy = (char *)malloc((len + 1) * sizeof(char));
+	if (cpy == NULL)
 		return (NULL);
 	while (s[i] != '\0')
 	{
